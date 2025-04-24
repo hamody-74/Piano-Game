@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-20" />
+    <meta name="author" content="Mohamed Ashraf" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <title>Piano Game</title>
+  </head>
+  <body>
+    <h1>
+      Welcome to my <span>P</span><span>i</span><span>a</span><span>n</span
+      ><span>o</span> Game!
+    </h1>
+    <div class="keys">
+      <div class="sound-key key do" data-sound="./src/Do.mp3">
+        <span>do</span>
+      </div>
+      <div class="sound-key key re" data-sound="./src/Re.mp3">
+        <span>re</span>
+      </div>
+      <div class="sound-key key mi" data-sound="./src/Mi.mp3">
+        <span>mi</span>
+      </div>
+      <div class="sound-key key fa" data-sound="./src/Fa.mp3">
+        <span>fa</span>
+      </div>
+      <div class="sound-key key so" data-sound="./src/So.mp3">
+        <span>so</span>
+      </div>
+      <div class="sound-key key la" data-sound="./src/La.mp3">
+        <span>la</span>
+      </div>
+      <div class="sound-key key ti" data-sound="./src/Ti.mp3">
+        <span>ti</span>
+      </div>
+    </div>
+
+    <footer>
+      <div class="media">
+        <a href="https://www.facebook.com/share/1BWkCmckjV/"
+          ><i class="fa-brands fa-facebook"></i
+        ></a>
+        <a href="https://www.instagram.com/hamody_7466/"
+          ><i class="fa-brands fa-square-instagram"></i
+        ></a>
+        <a href="https://github.com/hamody-74"
+          ><i class="fa-brands fa-github"></i
+        ></a>
+        <a
+          href="https://x.com/_Just_MO_o?t=SmzSfos_K60KXNdqKsuF-g&s=09
+        "
+          ><i class="fa-brands fa-square-x-twitter"></i
+        ></a>
+      </div>
+    </footer>
+
+    <script>
+      const divs = document.querySelectorAll(".sound-key");
+
+      divs.forEach((div) => {
+        div.addEventListener("click", () => {
+          const soundPath = div.getAttribute("data-sound");
+          const audio = new Audio(soundPath);
+          audio.play();
+        });
+      });
+    </script>
+  </body>
+</html>

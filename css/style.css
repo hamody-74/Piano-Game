@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  min-height: 100vh;
+}
+
+html {
+  font-size: 16px;
+  font-family: "Optimistic Text normal", sans-serif;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 2rem 1rem;
+  background-color: #f1f1f0;
+}
+
+:root {
+  --outrageous-orange: #fe5732;
+  --sunglow: #febc33;
+  --green-yellow: #75fe32;
+  --scream-green: #33ff57;
+  --bright-turquoise: #32febd;
+  --light-dodger-blue: #33a7ff;
+  --dodger-blue: #3370fe;
+}
+
+h1 {
+  text-align: center;
+}
+
+h1 span {
+  font-size: 2rem;
+  color: var(--dodger-blue);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.keys {
+  display: flex;
+  gap: 1rem;
+  max-width: 500px;
+  width: 100%;
+  margin: 50px auto;
+}
+
+@media (max-width: 600px) {
+  .keys {
+    gap: 0.5rem;
+  }
+}
+
+.keys .key {
+  width: calc(100% / 7 - 1rem);
+  min-height: 300px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  padding-bottom: 10px;
+  font-weight: normal;
+  text-transform: capitalize;
+  transition: all 0.1s ease;
+  flex: 1;
+  overflow: hidden;
+}
+
+.key.do {
+  background-color: var(--outrageous-orange);
+}
+.key.re {
+  background-color: var(--sunglow);
+}
+.key.mi {
+  background-color: var(--green-yellow);
+}
+.key.fa {
+  background-color: var(--scream-green);
+}
+.key.so {
+  background-color: var(--bright-turquoise);
+}
+.key.la {
+  background-color: var(--light-dodger-blue);
+}
+.key.ti {
+  background-color: var(--dodger-blue);
+}
+
+.key:hover {
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.keys .key:active {
+  transform: translateY(4px);
+  background-color: #ddd;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+footer .media {
+  text-align: center;
+}
+
+footer .media a {
+  text-decoration: none;
+  color: #000;
+  font-size: 2rem;
+  padding: 0.5rem;
+}
+
+footer .media a:hover > i {
+  scale: 1.2;
+  transition: 0.3s linear all;
+}
+
+footer .media a:nth-child(1):hover > i {
+  color: #1877f2;
+}
+footer .media a:nth-child(2):hover > i {
+  color: #fe5732;
+}
+footer .media a:nth-child(3):hover > i {
+  color: #181717;
+}
+footer .media a:nth-child(4):hover > i {
+  color: #000000;
+}
